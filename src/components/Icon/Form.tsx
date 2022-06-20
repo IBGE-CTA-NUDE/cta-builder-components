@@ -42,13 +42,13 @@ const IconForm: React.FC<IconFormProps> = ({
       </ColumnHeader>
 
       <FormGroup>
-        <FormItem column label="close">
+        <FormItem inputFirst label="close">
           <input type="radio"
             value="close-circle"
             {...register('icon', {required: true})}
           />
         </FormItem>
-        <FormItem column label="chevron-down">
+        <FormItem inputFirst label="chevron-down">
           <input type="radio"
             value="chevron-down"
             {...register('icon', {required: true})}

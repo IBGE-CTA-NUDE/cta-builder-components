@@ -1,10 +1,12 @@
 import React from 'react';
+import cn from 'classnames';
 import styled from 'styled-components';
 
 interface LabelProps {
   label?: React.ReactNode;
   children?: React.ReactNode;
   column?: boolean;
+  inputFirst?: boolean;
 }
 
 const LabelContainer = styled.label`
@@ -22,14 +24,25 @@ const Content = styled.div`
   }
 `;
 
-const FormItem: React.FC<LabelProps> = ({label, column = false, children}): React.ReactElement => {
+const FormItem: React.FC<LabelProps> = ({
+  label,
+  column = false,
+  inputFirst = false,
+  children,
+}): React.ReactElement => {
+  const first = inputFirst ? children : label;
+  const second = inputFirst ? label : children;
+
   return (
-    <LabelContainer className={column ? 'column' : 'row'}>
+    <LabelContainer className={cn({
+      'row': !column,
+      'column': column,
+    })}>
       <Content>
-        { label }
+        { first }
       </Content>
       <Content>
-        { children }
+        { second }
       </Content>
     </LabelContainer>
   );
