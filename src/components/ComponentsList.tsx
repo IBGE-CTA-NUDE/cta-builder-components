@@ -26,6 +26,12 @@ const ComponentsList = () => {
       </NavLink>
       <NavLink
         style={({isActive}) => isActive ? {fontWeight: 'bolder'} : {}}
+        to={`/icon`}
+      >
+        Icon
+      </NavLink>
+      <NavLink
+        style={({isActive}) => isActive ? {fontWeight: 'bolder'} : {}}
         to={`/tooltip`}
       >
         Tooltip
