@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "yarn format && tsc && vite build",
+    "build": "yarn lint && tsc && vite build",
     "preview": "vite preview",
-    "lint": "npx eslint \"src/**/*.{jsx,js,tsx,ts}\"",
-    "lint:fix": "npx eslint \"src/**/*.{jsx,js,tsx,ts}\" --fix",
-    "lint:quiet": "npx eslint \"src/**/*.{jsx,js,tsx,ts}\" --quiet"
+    "lint": "npx eslint \"**/*.{jsx,js,tsx,ts}\"",
+    "lint:fix": "npx eslint \"**/*.{jsx,js,tsx,ts}\" --fix",
+    "lint:quiet": "npx eslint \"**/*.{jsx,js,tsx,ts}\" --quiet"
   },
   "dependencies": {
     "classnames": "^2.3.1",
