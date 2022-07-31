@@ -2,9 +2,9 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 
 import {useCurrentRef} from '../../hooks/useCurrentRef';
-import {FormItem} from '../Form/Label';
 import {ColumnHeader} from '../Form/ColumnHeader';
 import {FormGroup} from '../Form/FormGroup';
+import {FormItem} from '../Form/Label';
 
 interface TooltipFormProps {
   onSubmit: (data: TooltipFormData) => void;
@@ -35,25 +35,27 @@ const TooltipForm: React.FC<TooltipFormProps> = ({
   return (
     <form onSubmit={handleSubmit(submit)}>
       <ColumnHeader>
-        <p><strong>Tooltip props</strong></p>
-        <button type="submit">Atualizar</button>
+        <p>
+          <strong>Tooltip props</strong>
+        </p>
+        <button type='submit'>Atualizar</button>
       </ColumnHeader>
 
       <FormGroup>
-        <FormItem column label="Texto do tooltip">
+        <FormItem column label='Texto do tooltip'>
           <textarea
             rows={5}
-            defaultValue=""
+            defaultValue=''
             {...register('tooltip', {required: true})}
           />
         </FormItem>
       </FormGroup>
 
       <FormGroup>
-        <FormItem column label="Conteúdo">
+        <FormItem column label='Conteúdo'>
           <textarea
             rows={5}
-            defaultValue=""
+            defaultValue=''
             {...register('content', {required: true})}
           />
         </FormItem>

@@ -1,9 +1,9 @@
 import React from 'react';
 
+import {Page, PageExamples, PagePreview, PageSidebar} from '../components/Page';
 import {TooltipExamples} from '../components/Tooltip/Examples';
 import {TooltipForm, TooltipFormData} from '../components/Tooltip/Form';
 import {TooltipPreview} from '../components/Tooltip/Preview';
-import {Page, PageExamples, PagePreview, PageSidebar} from '../components/Page';
 
 const TooltipPage = (): React.ReactElement => {
   const [preview, setPreview] = React.useState<TooltipFormData | null>(null);

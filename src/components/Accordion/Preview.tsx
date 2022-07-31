@@ -43,11 +43,13 @@ const PreviewCode: React.FC<AccordionPreviewProps> = ({
     return (
       <div style={{borderRadius: '5px', padding: '15px', backgroundColor: '#e5e5e5'}}>
         <pre>
-          <code>{`
+          <code>
+            {`
 <cta-accordion name="${content[0].trigger}">
   ${content[0].content}
 </cta-accordion>
-          `}</code>
+          `}
+          </code>
         </pre>
       </div>
     );
@@ -56,15 +58,19 @@ const PreviewCode: React.FC<AccordionPreviewProps> = ({
   return (
     <div style={{borderRadius: '5px', padding: '15px', backgroundColor: '#e5e5e5'}}>
       <pre>
-        <code>{`
+        <code>
+          {`
 <cta-accordion-group>
-          ${content.map(({trigger, content}) => `
+          ${
+    content.map(({trigger, content}) => `
   <cta-accordion name="${trigger}">
     ${content}
-  </cta-accordion>`).join('\n')}
+  </cta-accordion>`).join('\n')
+    }
 
 </cta-accordion-group>
-          `}</code>
+          `}
+        </code>
       </pre>
     </div>
   );

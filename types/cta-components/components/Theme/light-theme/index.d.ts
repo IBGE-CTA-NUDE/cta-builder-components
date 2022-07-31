@@ -1,1 +1,1 @@
-export declare const lightTheme: import("lit").CSSResult;
+export declare const lightTheme: import('lit').CSSResult;

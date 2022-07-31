@@ -1,1 +1,1 @@
-export declare const contentStyles: import("lit").CSSResult;
+export declare const contentStyles: import('lit').CSSResult;

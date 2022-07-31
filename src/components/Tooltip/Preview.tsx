@@ -28,11 +28,13 @@ const PreviewCode: React.FC<TooltipPreviewProps> = ({
   return (
     <div style={{borderRadius: '5px', padding: '15px', backgroundColor: '#e5e5e5'}}>
       <pre>
-        <code>{`
+        <code>
+          {`
 <cta-tooltip text="${content.tooltip}">
   ${content.content}
 </cta-tooltip>
-          `}</code>
+          `}
+        </code>
       </pre>
     </div>
   );

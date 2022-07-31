@@ -1,1 +1,1 @@
-export declare const typography: import("lit").CSSResult;
+export declare const typography: import('lit').CSSResult;

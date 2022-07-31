@@ -1,1 +1,1 @@
-export declare const baseVariables: import("lit").CSSResult;
+export declare const baseVariables: import('lit').CSSResult;

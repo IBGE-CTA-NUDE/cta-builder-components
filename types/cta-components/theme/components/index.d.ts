@@ -1,1 +1,1 @@
-export declare const components: import("lit").CSSResult;
+export declare const components: import('lit').CSSResult;

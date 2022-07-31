@@ -2,18 +2,18 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 
 import {useCurrentRef} from '../../hooks/useCurrentRef';
-import {FormItem} from '../Form/Label';
-import {FormGroup} from '../Form/FormGroup';
 import {ColumnHeader} from '../Form/ColumnHeader';
+import {FormGroup} from '../Form/FormGroup';
+import {FormItem} from '../Form/Label';
 
 interface IconFormProps {
   onSubmit: (data: IconFormData) => void;
 }
 
 export type IconFormData = {
-  icon: string,
-  width: number,
-  height: number,
+  icon: string;
+  width: number;
+  height: number;
 };
 
 const IconForm: React.FC<IconFormProps> = ({
@@ -37,38 +37,30 @@ const IconForm: React.FC<IconFormProps> = ({
   return (
     <form onSubmit={handleSubmit(submit)}>
       <ColumnHeader>
-        <p><strong>Icon props</strong></p>
-        <button type="submit">Atualizar</button>
+        <p>
+          <strong>Icon props</strong>
+        </p>
+        <button type='submit'>Atualizar</button>
       </ColumnHeader>
 
       <FormGroup>
-        <FormItem inputFirst label="close">
-          <input type="radio"
-            value="close-circle"
-            {...register('icon', {required: true})}
-          />
+        <FormItem inputFirst label='close'>
+          <input type='radio' value='close-circle' {...register('icon', {required: true})} />
         </FormItem>
-        <FormItem inputFirst label="chevron-down">
-          <input type="radio"
-            value="chevron-down"
-            {...register('icon', {required: true})}
-          />
+        <FormItem inputFirst label='chevron-down'>
+          <input type='radio' value='chevron-down' {...register('icon', {required: true})} />
         </FormItem>
       </FormGroup>
 
       <FormGroup>
-        <FormItem column label="Altura">
-          <input type="height" min="0"
-            {...register('height', {required: true})}
-          />
+        <FormItem column label='Altura'>
+          <input type='height' min='0' {...register('height', {required: true})} />
         </FormItem>
       </FormGroup>
 
       <FormGroup>
-        <FormItem column label="Largura">
-          <input type="number" min="0"
-            {...register('width', {required: true})}
-          />
+        <FormItem column label='Largura'>
+          <input type='number' min='0' {...register('width', {required: true})} />
         </FormItem>
       </FormGroup>
     </form>

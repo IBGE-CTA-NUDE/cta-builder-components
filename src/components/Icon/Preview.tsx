@@ -11,9 +11,7 @@ const Preview: React.FC<IconPreviewProps> = ({
     return null;
   }
 
-  return (
-    <cta-icon name={content.icon} width={content.width} height={content.height}></cta-icon>
-  );
+  return <cta-icon name={content.icon} width={content.width} height={content.height}></cta-icon>;
 };
 
 const PreviewCode: React.FC<IconPreviewProps> = ({
@@ -26,9 +24,11 @@ const PreviewCode: React.FC<IconPreviewProps> = ({
   return (
     <div style={{borderRadius: '5px', padding: '15px', backgroundColor: '#e5e5e5'}}>
       <pre>
-        <code>{`
+        <code>
+          {`
 <cta-icon name="${content.icon}" width="${content.width}" height="${content.height}" ></cta-icon>
-          `}</code>
+          `}
+        </code>
       </pre>
     </div>
   );

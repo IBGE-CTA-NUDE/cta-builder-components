@@ -1,2 +1,2 @@
-declare const theme: import("lit").CSSResult;
+declare const theme: import('lit').CSSResult;
 export default theme;

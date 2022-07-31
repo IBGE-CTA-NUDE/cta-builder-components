@@ -1,1 +1,1 @@
-export declare const tooltipStyles: import("lit").CSSResult;
+export declare const tooltipStyles: import('lit').CSSResult;

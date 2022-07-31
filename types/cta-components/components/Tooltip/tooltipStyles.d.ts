@@ -17,4 +17,4 @@
       </div>
     </div>
  */
-export declare const tooltipStyles: import("lit").CSSResult;
+export declare const tooltipStyles: import('lit').CSSResult;

@@ -1,5 +1,5 @@
-import React from 'react';
 import cn from 'classnames';
+import React from 'react';
 import styled from 'styled-components';
 
 interface LabelProps {
@@ -34,15 +34,17 @@ const FormItem: React.FC<LabelProps> = ({
   const second = inputFirst ? label : children;
 
   return (
-    <LabelContainer className={cn({
-      'row': !column,
-      'column': column,
-    })}>
+    <LabelContainer
+      className={cn({
+        'row': !column,
+        'column': column,
+      })}
+    >
       <Content>
-        { first }
+        {first}
       </Content>
       <Content>
-        { second }
+        {second}
       </Content>
     </LabelContainer>
   );

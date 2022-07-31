@@ -1,1 +1,1 @@
-export declare const accordionStyles: import("lit").CSSResult;
+export declare const accordionStyles: import('lit').CSSResult;
